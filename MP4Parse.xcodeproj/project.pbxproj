@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		05C825DE13380EF800892524 /* stl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl.h; sourceTree = "<group>"; };
+		05C825E013380F0200892524 /* mp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4.h; sourceTree = "<group>"; };
+		05C825E21338105200892524 /* stdc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdc.h; sourceTree = "<group>"; };
+		05C825E31338172900892524 /* atoms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atoms.h; sourceTree = "<group>"; };
+		05DE45B113378733002269FF /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		05DE45B313378733002269FF /* C++.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "C++.mk"; sourceTree = "<group>"; };
+		05DE45B413378733002269FF /* C.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = C.mk; sourceTree = "<group>"; };
+		05DE45B513378733002269FF /* Objective-C.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Objective-C.mk"; sourceTree = "<group>"; };
+		05DE45B613378733002269FF /* makefile-config.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "makefile-config.mk"; sourceTree = "<group>"; };
+		05DE45B813378733002269FF /* en.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.mk; sourceTree = "<group>"; };
+		05DE45B913378733002269FF /* fr.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fr.mk; sourceTree = "<group>"; };
+		05DE45BE13378733002269FF /* mp4parse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4parse.cpp; sourceTree = "<group>"; };
+		05DE45C113378818002269FF /* MP4.BinaryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.BinaryStream.h; sourceTree = "<group>"; };
+		05DE45CB13379E87002269FF /* MP4.Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.Atom.h; sourceTree = "<group>"; };
+		05DE45CC13379E87002269FF /* MP4.ContainerAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.ContainerAtom.h; sourceTree = "<group>"; };
+		05DE45CD13379E87002269FF /* MP4.DataAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.DataAtom.h; sourceTree = "<group>"; };
+		05DE45CE13379E87002269FF /* MP4.File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.File.h; sourceTree = "<group>"; };
+		05DE45CF13379E87002269FF /* MP4.FullBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.FullBox.h; sourceTree = "<group>"; };
+		05DE45D013379E87002269FF /* MP4.Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.Parser.h; sourceTree = "<group>"; };
+		05DE45D113379E87002269FF /* MP4.UnknownAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.UnknownAtom.h; sourceTree = "<group>"; };
+		05DE45D813379FAA002269FF /* MP4.Atom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.Atom.cpp; sourceTree = "<group>"; };
+		05DE45D913379FAA002269FF /* MP4.BinaryStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.BinaryStream.cpp; sourceTree = "<group>"; };
+		05DE45DA13379FAA002269FF /* MP4.ContainerAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.ContainerAtom.cpp; sourceTree = "<group>"; };
+		05DE45DB13379FAB002269FF /* MP4.DataAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.DataAtom.cpp; sourceTree = "<group>"; };
+		05DE45DC13379FAB002269FF /* MP4.File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.File.cpp; sourceTree = "<group>"; };
+		05DE45DD13379FAC002269FF /* MP4.FullBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.FullBox.cpp; sourceTree = "<group>"; };
+		05DE45DE13379FAD002269FF /* MP4.Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.Parser.cpp; sourceTree = "<group>"; };
+		05DE45DF13379FAD002269FF /* MP4.UnknownAtom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4.UnknownAtom.cpp; sourceTree = "<group>"; };
+		05FFF40A13380B880091B4ED /* MP4.FREE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MP4.FREE.cpp; path = source/MP4.FREE.cpp; sourceTree = SOURCE_ROOT; };
+		05FFF40B13380B880091B4ED /* MP4.FTYP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MP4.FTYP.cpp; path = source/MP4.FTYP.cpp; sourceTree = SOURCE_ROOT; };
+		05FFF40C13380B880091B4ED /* MP4.MDHD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MP4.MDHD.cpp; path = source/MP4.MDHD.cpp; sourceTree = SOURCE_ROOT; };
+		05FFF40F13380BC10091B4ED /* MP4.FREE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.FREE.h; sourceTree = "<group>"; };
+		05FFF41013380BC10091B4ED /* MP4.FTYP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.FTYP.h; sourceTree = "<group>"; };
+		05FFF41113380BC10091B4ED /* MP4.MDHD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4.MDHD.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05DE459E13378714002269FF = {
+			isa = PBXGroup;
+			children = (
+				05DE45B113378733002269FF /* makefile */,
+				05DE45B213378733002269FF /* makefile-code */,
+				05DE45B613378733002269FF /* makefile-config.mk */,
+				05DE45B713378733002269FF /* makefile-lang */,
+				05DE45BA13378733002269FF /* source */,
+			);
+			sourceTree = "<group>";
+		};
+		05DE45B213378733002269FF /* makefile-code */ = {
+			isa = PBXGroup;
+			children = (
+				05DE45B313378733002269FF /* C++.mk */,
+				05DE45B413378733002269FF /* C.mk */,
+				05DE45B513378733002269FF /* Objective-C.mk */,
+			);
+			path = "makefile-code";
+			sourceTree = "<group>";
+		};
+		05DE45B713378733002269FF /* makefile-lang */ = {
+			isa = PBXGroup;
+			children = (
+				05DE45B813378733002269FF /* en.mk */,
+				05DE45B913378733002269FF /* fr.mk */,
+			);
+			path = "makefile-lang";
+			sourceTree = "<group>";
+		};
+		05DE45BA13378733002269FF /* source */ = {
+			isa = PBXGroup;
+			children = (
+				05FFF40E13380BA70091B4ED /* Data Atoms */,
+				05DE45D813379FAA002269FF /* MP4.Atom.cpp */,
+				05DE45D913379FAA002269FF /* MP4.BinaryStream.cpp */,
+				05DE45DA13379FAA002269FF /* MP4.ContainerAtom.cpp */,
+				05DE45DB13379FAB002269FF /* MP4.DataAtom.cpp */,
+				05DE45DC13379FAB002269FF /* MP4.File.cpp */,
+				05DE45DD13379FAC002269FF /* MP4.FullBox.cpp */,
+				05DE45DE13379FAD002269FF /* MP4.Parser.cpp */,
+				05DE45DF13379FAD002269FF /* MP4.UnknownAtom.cpp */,
+				05DE45BB13378733002269FF /* include */,
+				05DE45BC13378733002269FF /* lib */,
+				05DE45BE13378733002269FF /* mp4parse.cpp */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		05DE45BB13378733002269FF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				05FFF40D13380B940091B4ED /* Data Atoms */,
+				05DE45CB13379E87002269FF /* MP4.Atom.h */,
+				05DE45C113378818002269FF /* MP4.BinaryStream.h */,
+				05DE45CC13379E87002269FF /* MP4.ContainerAtom.h */,
+				05DE45CD13379E87002269FF /* MP4.DataAtom.h */,
+				05DE45CE13379E87002269FF /* MP4.File.h */,
+				05DE45CF13379E87002269FF /* MP4.FullBox.h */,
+				05DE45D013379E87002269FF /* MP4.Parser.h */,
+				05DE45D113379E87002269FF /* MP4.UnknownAtom.h */,
+				05C825E31338172900892524 /* atoms.h */,
+				05C825E013380F0200892524 /* mp4.h */,
+				05C825DE13380EF800892524 /* stl.h */,
+				05C825E21338105200892524 /* stdc.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		05DE45BC13378733002269FF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				05DE45BD13378733002269FF /* include */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		05DE45BD13378733002269FF /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		05FFF40D13380B940091B4ED /* Data Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				05FFF40F13380BC10091B4ED /* MP4.FREE.h */,
+				05FFF41013380BC10091B4ED /* MP4.FTYP.h */,
+				05FFF41113380BC10091B4ED /* MP4.MDHD.h */,
+			);
+			name = "Data Atoms";
+			sourceTree = "<group>";
+		};
+		05FFF40E13380BA70091B4ED /* Data Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				05FFF40A13380B880091B4ED /* MP4.FREE.cpp */,
+				05FFF40B13380B880091B4ED /* MP4.FTYP.cpp */,
+				05FFF40C13380B880091B4ED /* MP4.MDHD.cpp */,
+			);
+			name = "Data Atoms";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		05DE45A513378714002269FF /* MP4Parse */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 05DE45A813378714002269FF /* Build configuration list for PBXLegacyTarget "MP4Parse" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = MP4Parse;
+			passBuildSettingsInEnvironment = 1;
+			productName = MP4Parse;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		05DE45A013378714002269FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = eosgarden;
+			};
+			buildConfigurationList = 05DE45A313378714002269FF /* Build configuration list for PBXProject "MP4Parse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05DE459E13378714002269FF;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05DE45A513378714002269FF /* MP4Parse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		05DE45A613378714002269FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		05DE45A713378714002269FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		05DE45A913378714002269FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05DE45AA13378714002269FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05DE45A313378714002269FF /* Build configuration list for PBXProject "MP4Parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DE45A613378714002269FF /* Debug */,
+				05DE45A713378714002269FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05DE45A813378714002269FF /* Build configuration list for PBXLegacyTarget "MP4Parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DE45A913378714002269FF /* Debug */,
+				05DE45AA13378714002269FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05DE45A013378714002269FF /* Project object */;
+}
