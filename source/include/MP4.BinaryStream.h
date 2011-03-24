@@ -104,6 +104,8 @@ namespace MP4
             std::string * readUTF8String( void );
             std::string * readLongUTF8String( void );
             
+            void readMatrix( matrix * m );
+            
             bool good( void ) const;
             bool eof( void ) const;
             bool fail( void ) const;

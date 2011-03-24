@@ -29,12 +29,22 @@
  
 /* $Id$ */
 
-#ifndef _MP4_H_
-#define _MP4_H_
+#ifndef _TYPES_H_
+#define _TYPES_H_
 #pragma once
 
-#include "stdc.h"
-#include "stl.h"
-#include "types.h"
+typedef struct _matrix
+{
+    float a;
+    float b;
+    float u;
+    float c;
+    float d;
+    float v;
+    float x;
+    float y;
+    float w;
+}
+matrix;
 
-#endif /* _MP4_H_ */
+#endif /* _TYPES_H_ */

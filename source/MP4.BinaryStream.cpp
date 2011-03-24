@@ -477,6 +477,20 @@ std::string * BinaryStream::readLongUTF8String( void )
     
     return NULL;
 }
+            
+void BinaryStream::readMatrix( matrix * m )
+{
+    ( void )m;
+    /*m->a = this->readBigEndianFixedPoint( 16, 16 );
+    m->b = this->readBigEndianFixedPoint( 16, 16 );
+    m->u = this->readBigEndianFixedPoint(  2, 30 );
+    m->c = this->readBigEndianFixedPoint( 16, 16 );
+    m->d = this->readBigEndianFixedPoint( 16, 16 );
+    m->v = this->readBigEndianFixedPoint(  2, 30 );
+    m->x = this->readBigEndianFixedPoint( 16, 16 );
+    m->y = this->readBigEndianFixedPoint( 16, 16 );
+    m->w = this->readBigEndianFixedPoint(  2, 30 );*/
+}
 
 bool BinaryStream::good( void ) const
 {
