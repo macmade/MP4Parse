@@ -480,8 +480,7 @@ std::string * BinaryStream::readLongUTF8String( void )
             
 void BinaryStream::readMatrix( matrix * m )
 {
-    ( void )m;
-    /*m->a = this->readBigEndianFixedPoint( 16, 16 );
+    m->a = this->readBigEndianFixedPoint( 16, 16 );
     m->b = this->readBigEndianFixedPoint( 16, 16 );
     m->u = this->readBigEndianFixedPoint(  2, 30 );
     m->c = this->readBigEndianFixedPoint( 16, 16 );
@@ -489,7 +488,7 @@ void BinaryStream::readMatrix( matrix * m )
     m->v = this->readBigEndianFixedPoint(  2, 30 );
     m->x = this->readBigEndianFixedPoint( 16, 16 );
     m->y = this->readBigEndianFixedPoint( 16, 16 );
-    m->w = this->readBigEndianFixedPoint(  2, 30 );*/
+    m->w = this->readBigEndianFixedPoint(  2, 30 );
 }
 
 bool BinaryStream::good( void ) const
