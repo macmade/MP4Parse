@@ -77,9 +77,55 @@ DEPS_mp4parse       = MP4.Atom \
                       MP4.FullBox \
                       MP4.Parser \
                       MP4.UnknownAtom \
+                      MP4.BXML \
+                      MP4.CO64 \
+                      MP4.CPRT \
+                      MP4.CTTS \
+                      MP4.DREF \
+                      MP4.ELST \
                       MP4.FREE \
+                      MP4.FRMA \
                       MP4.FTYP \
+                      MP4.HDLR \
+                      MP4.HMHD \
+                      MP4.IINF \
+                      MP4.ILOC \
+                      MP4.IMIF \
+                      MP4.IPMC \
+                      MP4.MDAT \
                       MP4.MDHD \
+                      MP4.MEHD \
+                      MP4.MFHD \
+                      MP4.MFRO \
+                      MP4.MVHD \
+                      MP4.PADB \
+                      MP4.PDIN \
+                      MP4.PITM \
+                      MP4.SBGP \
+                      MP4.SCHI \
+                      MP4.SCHM \
+                      MP4.SDTP \
+                      MP4.SGPD \
+                      MP4.SMHD \
+                      MP4.STCO \
+                      MP4.STDP \
+                      MP4.STSC \
+                      MP4.STSD \
+                      MP4.STSH \
+                      MP4.STSS \
+                      MP4.STSZ \
+                      MP4.STTS \
+                      MP4.STZ2 \
+                      MP4.SUBS \
+                      MP4.TFHD \
+                      MP4.TFRA \
+                      MP4.TKHD \
+                      MP4.TREF \
+                      MP4.TREX \
+                      MP4.TRUN \
+                      MP4.UDTA \
+                      MP4.VMHD \
+                      MP4.XML
 
 #-------------------------------------------------------------------------------
 # Dependancies for the executables (libraries)

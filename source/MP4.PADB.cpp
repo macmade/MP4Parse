@@ -29,64 +29,25 @@
  
 /* $Id$ */
 
-#ifndef _ATOMS_H_
-#define _ATOMS_H_
-#pragma once
-
-#include "MP4.Atom.h"
-#include "MP4.DataAtom.h"
-#include "MP4.ContainerAtom.h"
-#include "MP4.File.h"
-#include "MP4.FullBox.h"
-#include "MP4.UnknownAtom.h"
-#include "MP4.BXML.h"
-#include "MP4.CO64.h"
-#include "MP4.CPRT.h"
-#include "MP4.CTTS.h"
-#include "MP4.DREF.h"
-#include "MP4.ELST.h"
-#include "MP4.FREE.h"
-#include "MP4.FRMA.h"
-#include "MP4.FTYP.h"
-#include "MP4.HDLR.h"
-#include "MP4.HMHD.h"
-#include "MP4.IINF.h"
-#include "MP4.ILOC.h"
-#include "MP4.IMIF.h"
-#include "MP4.IPMC.h"
-#include "MP4.MDAT.h"
-#include "MP4.MDHD.h"
-#include "MP4.MEHD.h"
-#include "MP4.MFHD.h"
-#include "MP4.MFRO.h"
-#include "MP4.MVHD.h"
 #include "MP4.PADB.h"
-#include "MP4.PDIN.h"
-#include "MP4.PITM.h"
-#include "MP4.SBGP.h"
-#include "MP4.SCHI.h"
-#include "MP4.SCHM.h"
-#include "MP4.SDTP.h"
-#include "MP4.SGPD.h"
-#include "MP4.SMHD.h"
-#include "MP4.STCO.h"
-#include "MP4.STDP.h"
-#include "MP4.STSC.h"
-#include "MP4.STSD.h"
-#include "MP4.STSH.h"
-#include "MP4.STSS.h"
-#include "MP4.STSZ.h"
-#include "MP4.STTS.h"
-#include "MP4.STZ2.h"
-#include "MP4.SUBS.h"
-#include "MP4.TFHD.h"
-#include "MP4.TFRA.h"
-#include "MP4.TKHD.h"
-#include "MP4.TREF.h"
-#include "MP4.TREX.h"
-#include "MP4.TRUN.h"
-#include "MP4.UDTA.h"
-#include "MP4.VMHD.h"
-#include "MP4.XML.h"
 
-#endif /* _ATOMS_H_ */
+using namespace MP4;
+          
+PADB::PADB( void )
+{
+    this->_type.append( "PADB" );
+}
+
+std::string PADB::description( void )
+{
+    std::ostringstream o;
+    
+    o << "MP4 Atom:           " << this->_type << "\n";
+    
+    return o.str();
+}
+
+void PADB::processData( MP4::BinaryStream * stream, size_t length )
+{
+    stream->ignore( length );
+}
