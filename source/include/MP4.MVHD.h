@@ -35,16 +35,25 @@
 #include "mp4.h"
 #include "MP4.DataAtom.h"
 #include "MP4.BinaryStream.h"
+#include "MP4.FullBox.h"
 
 namespace MP4
 {
-    class MVHD : DataAtom
+    class MVHD : FullBox
     {
         private:
             
             
         protected:
             
+            uint64_t _creationTime;
+            uint64_t _modificationTime;
+            uint32_t _timeScale;
+            uint64_t _duration;
+            float    _rate;
+            float    _volume;
+            matrix   _matrix;
+            uint32_t _nextTrackId;
             
         public:
             

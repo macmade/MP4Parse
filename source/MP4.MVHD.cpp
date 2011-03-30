@@ -49,5 +49,36 @@ std::string MVHD::description( void )
 
 void MVHD::processData( MP4::BinaryStream * stream, size_t length )
 {
-    stream->ignore( length );
+    FullBox::processData( stream, length );
+    
+    if( this->_version == 1 )
+    {
+        this->_creationTime     = stream->readBigEndianUnsignedLong();
+        this->_modificationTime = stream->readBigEndianUnsignedLong();
+        this->_timeScale        = stream->readBigEndianUnsignedInteger();
+        this->_duration         = stream->readBigEndianUnsignedLong();
+        this->_rate             = stream->readBigEndianFixedPoint( 16, 16 );
+        this->_volume           = stream->readBigEndianFixedPoint( 8, 8 );
+        
+        stream->ignore( 10 );
+        stream->readMatrix( &( this->_matrix ) );
+        stream->ignore( 24 );
+        
+        this->_nextTrackId = stream->readBigEndianUnsignedInteger();
+    }
+    else
+    {
+        this->_creationTime     = stream->readBigEndianUnsignedInteger();
+        this->_modificationTime = stream->readBigEndianUnsignedInteger();
+        this->_timeScale        = stream->readBigEndianUnsignedInteger();
+        this->_duration         = stream->readBigEndianUnsignedInteger();
+        this->_rate             = stream->readBigEndianFixedPoint( 16, 16 );
+        this->_volume           = stream->readBigEndianFixedPoint( 8, 8 );
+        
+        stream->ignore( 10 );
+        stream->readMatrix( &( this->_matrix ) );
+        stream->ignore( 24 );
+        
+        this->_nextTrackId = stream->readBigEndianUnsignedInteger();
+    }
 }
