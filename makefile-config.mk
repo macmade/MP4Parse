@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # 
-# Copyright (c) 2010, Jean-David Gadina <macmade@eosgarden.com>
+# Copyright (c) 2010, Jean-David Gadina - www.xs-labs.com
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -37,13 +37,9 @@
 # Please note that you need at least version 3.81 of GNU Make to use this file.
 # Older versions are not supported and will never be.
 # 
-# You also need a copy of the GNU Libtool in order to handle the shared objects.
-# GNU Libtool is sometimes called glibtool, or simply libtool.
-# Others implementations of Libtool are not supported at the time.
-# 
 #-------------------------------------------------------------------------------
 
-# $Id: makefile-config.mk 4 2011-01-05 07:42:35Z macmade@eosgarden.com $
+# $Id$
 
 #-------------------------------------------------------------------------------
 # Project programming language

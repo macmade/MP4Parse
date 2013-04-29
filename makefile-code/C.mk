@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # 
-# Copyright (c) 2010, Jean-David Gadina <macmade@eosgarden.com>
+# Copyright (c) 2010, Jean-David Gadina - www.xs-labs.com
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -37,13 +37,9 @@
 # Please note that you need at least version 3.81 of GNU Make to use this file.
 # Older versions are not supported and will never be.
 # 
-# You also need a copy of the GNU Libtool in order to handle the shared objects.
-# GNU Libtool is sometimes called glibtool, or simply libtool.
-# Others implementations of Libtool are not supported at the time.
-# 
 #-------------------------------------------------------------------------------
 
-# $Id: C.mk 2 2010-06-27 10:25:10Z macmade@eosgarden.com $
+# $Id$
 
 # Flag to let the makefile knows that the code specific options were included
 CODE_HASOPTIONS         := 1
@@ -54,8 +50,7 @@ CODE_HASOPTIONS         := 1
 
 EXT_CODE                = .c
 EXT_HEADERS             = .h
-EXT_LIB_OBJECT          = .lo
-EXT_LIB_ARCHIVE         = .la
+EXT_LIB_ARCHIVE         = .a
 EXT_OBJECT              = .o
 
 #-------------------------------------------------------------------------------
@@ -63,12 +58,10 @@ EXT_OBJECT              = .o
 #-------------------------------------------------------------------------------
 
 CC                      = gcc
-LIBTOOL                 = glibtool
+LIBTOOL                 = libtool
 
 #-------------------------------------------------------------------------------
 # Arguments for the compiler tools
 #-------------------------------------------------------------------------------
 
 ARGS_CC                 = -std=c99 -Os -pedantic -Werror -Wall -Wextra -Wbad-function-cast -Wdeclaration-after-statement -Werror-implicit-function-declaration -Wmissing-braces -Wmissing-declarations -Wmissing-field-initializers -Wmissing-prototypes -Wnested-externs -Wold-style-definition -Wparentheses -Wreturn-type -Wshadow -Wsign-compare -Wstrict-prototypes -Wswitch -Wuninitialized -Wunknown-pragmas -Wunused-function -Wunused-label -Wunused-parameter -Wunused-value -Wunused-variable
-ARGS_LIBTOOL_COMPILE    = --mode=compile
-ARGS_LIBTOOL_LINK       = --mode=link

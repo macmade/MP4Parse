@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # 
-# Copyright (c) 2010, Jean-David Gadina <macmade@eosgarden.com>
+# Copyright (c) 2010, Jean-David Gadina - www.xs-labs.com
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -38,13 +38,9 @@
 # Please note that you need at least version 3.81 of GNU Make to use this file.
 # Older versions are not supported and will never be.
 # 
-# You also need a copy of the GNU Libtool in order to handle the shared objects.
-# GNU Libtool is sometimes called glibtool, or simply libtool.
-# Others implementations of Libtool are not supported at the time.
-# 
 #-------------------------------------------------------------------------------
 
-# $Id: makefile 5 2011-03-18 00:56:58Z macmade@eosgarden.com $
+# $Id$
 
 #-------------------------------------------------------------------------------
 # Includes
@@ -146,14 +142,6 @@ _FILES_EXEC_BUILD = $(addprefix $(_DIR_BUILD_BIN),$(EXEC))
 
 # Stem symbol (defined to avoid problems with the second expansion)
 _STEM             = %
-
-# Checks the debug mode for libtool
-ifeq ($(DEBUG_LIBTOOL),0)
-
-# Debug off - Tells libtool to be quiet
-_ARGS_LIBTOOL     = --quiet
-
-endif
 
 # Adds the include directory to the search paths
 _ARGS_CC          = -I $(DIR_SRC_INC) -I $(DIR_SRC_LIB_INC) $(ARGS_CC)
@@ -314,11 +302,13 @@ _exec_end:
 $(_DIR_BUILD_LIB)%$(EXT_LIB_ARCHIVE): %$(EXT_CODE) %$(EXT_HEADERS)
 	@echo
 	@echo ------ $(subst _CFILE_,$<,$(subst _DIR_BUILD_,$(_DIR_BUILD_LIB),$(LANG_LO_BUILD)))
-	@$(LIBTOOL) $(_ARGS_LIBTOOL) $(ARGS_LIBTOOL_COMPILE) $(CC) -o $(subst $(EXT_LIB_ARCHIVE),$(EXT_LIB_OBJECT),$@) -c $< $(_ARGS_CC) $(CFLAGS)
+	$(if $(filter 1,$(DEBUG_CC)), @echo $(CC) -o $(subst $(EXT_LIB_ARCHIVE),$(EXT_OBJECT),$@) -c $< $(_ARGS_CC) $(CFLAGS))
+	@$(CC) -o $(subst $(EXT_LIB_ARCHIVE),$(EXT_OBJECT),$@) -c $< $(_ARGS_CC) $(CFLAGS)
 	@echo ------ $(LANG_DONE)
 	@echo
-	@echo ------ $(subst _TNAME_,$(addprefix $(_DIR_BUILD_LIB),$(subst $(EXT_LIB_ARCHIVE),$(EXT_LIB_OBJECT),$(@F))),$(subst _DIR_BUILD_,$(_DIR_BUILD_LIB),$(LANG_LA_BUILD)))
-	@$(LIBTOOL) $(_ARGS_LIBTOOL) $(ARGS_LIBTOOL_LINK) $(CC) -o $@ -c $(subst $(EXT_LIB_ARCHIVE),$(EXT_LIB_OBJECT),$@) $(_ARGS_CC) $(CFLAGS)
+	@echo ------ $(subst _TNAME_,$(addprefix $(_DIR_BUILD_LIB),$(subst $(EXT_LIB_ARCHIVE),$(EXT_OBJECT),$(@F))),$(subst _DIR_BUILD_,$(_DIR_BUILD_LIB),$(LANG_LA_BUILD)))
+	$(if $(filter 1,$(DEBUG_LIBTOOL)), @echo $(LIBTOOL) $(_ARGS_LIBTOOL) -static -o $@ $(subst $(EXT_LIB_ARCHIVE),$(EXT_OBJECT),$@))
+	@$(LIBTOOL) $(_ARGS_LIBTOOL) -static -o $@ $(subst $(EXT_LIB_ARCHIVE),$(EXT_OBJECT),$@)
 	@echo ------ $(LANG_DONE)
 
 # Builds the shared objects (with header file)
@@ -374,8 +364,7 @@ $(_DIR_BUILD_BIN)%: $(_DIR_BUILD_OBJ)%$(EXT_OBJECT) $$(patsubst $$(_STEM),$(_DIR
 		&& echo ------ $(LANG_DONE)\
 		&& echo\
 		&& echo ------ $(subst _TFILE_,$(@F),$(subst _DIR_BUILD_,$(_DIR_BUILD_BIN),$(subst _OFILE_,$(_DIR_BUILD_OBJ)$(@F)$(EXT_OBJECT),$(subst _DEPS_,"\n"$(patsubst %,"\n--------- "$(_DIR_BUILD_LIB)%$(EXT_LIB_ARCHIVE),$(DEPS_LIB_$(@F)))$(patsubst %,"\n--------- "$(_DIR_BUILD_OBJ)%$(EXT_OBJECT),$(DEPS_$(@F)))$(patsubst %,"\n--------- -l"%,$(DEPS_SYSLIB_$(@F)))"\n",$(LANG_EXEC_BUILD_HASDEPS)))))\
-		$(if $(filter 1,$(DEBUG_LIBTOOL)),&& echo $(LIBTOOL) $(_ARGS_LIBTOOL) $(ARGS_LIBTOOL_LINK) $(CC) $(if $(findstring Objective-C,$(code)), $(patsubst %, -framework %, $(OBJC_FRAMEWORK))) -o $@ $(_DIR_BUILD_OBJ)$(@F)$(EXT_OBJECT) $(patsubst %,$(_DIR_BUILD_LIB)%$(EXT_LIB_ARCHIVE),$(DEPS_LIB_$(@F))) $(patsubst %,$(_DIR_BUILD_OBJ)%$(EXT_OBJECT),$(DEPS_$(@F))) $(_ARGS_CC) $(CFLAGS))\
-		&& $(LIBTOOL) $(_ARGS_LIBTOOL) $(ARGS_LIBTOOL_LINK) $(CC) $(if $(findstring Objective-C,$(code)),$(patsubst %, -framework %, $(OBJC_FRAMEWORK))) -o $@ $(_DIR_BUILD_OBJ)$(@F)$(EXT_OBJECT) $(patsubst %,$(_DIR_BUILD_LIB)%$(EXT_LIB_ARCHIVE),$(DEPS_LIB_$(@F))) $(patsubst %,$(_DIR_BUILD_OBJ)%$(EXT_OBJECT),$(DEPS_$(@F))) $(patsubst %,"-l"%,$(DEPS_SYSLIB_$(@F))) $(_ARGS_CC) $(CFLAGS)\
+		&& $(CC) $(if $(findstring Objective-C,$(code)), -framework $(OBJC_FRAMEWORK)) -o $@ $(_DIR_BUILD_OBJ)$(@F)$(EXT_OBJECT) $(patsubst %,$(_DIR_BUILD_LIB)%$(EXT_LIB_ARCHIVE),$(DEPS_LIB_$(@F))) $(patsubst %,$(_DIR_BUILD_OBJ)%$(EXT_OBJECT),$(DEPS_$(@F))) $(patsubst %,"-l"%,$(DEPS_SYSLIB_$(@F))) $(_ARGS_CC) $(CFLAGS)\
 		&& echo ------ $(LANG_DONE)\
 		,\
 		@echo\
