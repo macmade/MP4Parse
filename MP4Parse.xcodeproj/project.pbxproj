@@ -355,7 +355,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = eosgarden;
+				ORGANIZATIONNAME = XS-Labs;
 			};
 			buildConfigurationList = 05DE45A313378714002269FF /* Build configuration list for PBXProject "MP4Parse" */;
 			compatibilityVersion = "Xcode 3.2";
