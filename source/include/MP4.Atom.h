@@ -50,6 +50,8 @@ namespace MP4
             
         public:
             
+            virtual ~Atom( void );
+            
             std::string getType( void );
             
             virtual std::string description( void ) = 0;

@@ -296,7 +296,7 @@ float BinaryStream::readFloat( void )
     
     for( i = 0; i > -24; i-- )
     {
-        if( mantissa & ( 1 << i + 23 ) )
+        if( mantissa & ( 1 << ( i + 23 ) ) )
         {
             flt += pow( 2, i + exp );
         }
@@ -340,7 +340,7 @@ double BinaryStream::readDouble( void )
     
     for( i = 0; i > -24; i-- )
     {
-        if( mantissa & ( 1 << i + 23 ) )
+        if( mantissa & ( 1 << ( i + 23 ) ) )
         {
             flt += pow( 2, i + exp );
         }

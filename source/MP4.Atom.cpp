@@ -33,6 +33,9 @@
 
 using namespace MP4;
 
+Atom::~Atom( void )
+{}
+
 std::string Atom::getType( void )
 {
     return this->_type;

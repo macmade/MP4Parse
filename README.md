@@ -1,6 +1,8 @@
 MP4Parse
 ========
 
+[![Build Status](https://travis-ci.org/macmade/MP4Parse.svg?branch=master)](https://travis-ci.org/macmade/MP4Parse)
+
 About
 -----
 

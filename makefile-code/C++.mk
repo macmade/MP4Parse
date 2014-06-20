@@ -42,7 +42,7 @@
 # $Id$
 
 # Flag to let the makefile knows that the code specific options were included
-CODE_HASOPTIONS        := 1
+CODE_HASOPTIONS         := 1
 
 #-------------------------------------------------------------------------------
 # Extensions for files
@@ -58,7 +58,7 @@ EXT_OBJECT              = .o
 #-------------------------------------------------------------------------------
 
 CC                      = g++
-LIBTOOL                 = glibtool
+LIBTOOL                 = libtool
 
 #-------------------------------------------------------------------------------
 # Arguments for the compiler tools
