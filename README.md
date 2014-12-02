@@ -2,17 +2,20 @@ MP4Parse
 ========
 
 [![Build Status](https://img.shields.io/travis/macmade/MP4Parse.svg?branch=master&style=flat)](https://travis-ci.org/macmade/MP4Parse)
+[![Issues](http://img.shields.io/github/issues/macmade/MP4Parse.svg?style=flat)](https://github.com/macmade/MP4Parse/issues)
+![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)
+![License](https://img.shields.io/badge/license-boost-brightgreen.svg?style=flat)
+[![Contact](https://img.shields.io/badge/contact-@macmade-blue.svg?style=flat)](https://twitter.com/macmade)
 
 About
 -----
 
-A project to parse MPEG-4 files in C++, similar to the [WOOPS PHP MPEG-4 component](https://github.com/macmade/WOOPS).  
-No longer developed, nor maintained.
+C++ library for MP4 file parsing.
 
 License
 -------
 
-MP4Parse is released under the terms of the Boost Software License - Version 1.0.
+MP4Parse is released under the terms of the BOOST license.
 
 Repository Infos
 ----------------
