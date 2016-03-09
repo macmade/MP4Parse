@@ -54,6 +54,7 @@ namespace MP4
             ~ContainerAtom( void );
             
             void addChild( Atom * a );
+            Atom* findChild( const std::string &type );
             bool hasChildren( void );
             unsigned int numberOfChildren( void );
             std::string description( void );
