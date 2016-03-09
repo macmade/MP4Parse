@@ -85,3 +85,31 @@ std::string ContainerAtom::description( void )
     
     return s;
 }
+
+Atom* ContainerAtom::findChild( const std::string &type )
+{
+    if ( this->_type == type )
+    {
+      return this;
+    }
+
+    std::multimap< std::string, Atom * >::iterator it;
+    for ( it = this->_children.begin(); it != this->_children.end(); ++it )
+    {
+        ContainerAtom *containerAtom = dynamic_cast< ContainerAtom* >( it->second );
+        if ( containerAtom )
+        {
+            return containerAtom->findChild( type );
+        }
+        else
+        {
+            Atom *atom = ( Atom* )it->second;
+            if ( atom->getType() == type )
+            {
+                return atom;
+            }
+        }
+    }
+
+    return NULL;
+}
