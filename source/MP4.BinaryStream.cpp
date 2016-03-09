@@ -605,3 +605,8 @@ std::istream & BinaryStream::seekg( std::streamoff off, std::ios_base::seekdir d
 {
     return stream.seekg( off, dir );
 }
+
+void BinaryStream::clear( void )
+{
+    return stream.clear();
+}
