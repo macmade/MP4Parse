@@ -129,6 +129,7 @@ namespace MP4
             std::istream & unget( void );
             std::istream & seekg( std::streampos pos );
             std::istream & seekg( std::streamoff off, std::ios_base::seekdir dir );
+            void clear( void );
     };
 }
 
