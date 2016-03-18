@@ -8,3 +8,10 @@ Icon?
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# Windows
+*.tlog
+*.opensdf
+*.sdf
+VisualStudio/Debug/
+VisualStudio/Release/
