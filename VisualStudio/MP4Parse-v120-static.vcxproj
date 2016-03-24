@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D55B3A32-923A-4673-AE50-E54908D4760B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MP4Parse</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>..\source\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\source\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\MP4.Atom.cpp" />
+    <ClCompile Include="..\source\MP4.BinaryStream.cpp" />
+    <ClCompile Include="..\source\MP4.BXML.cpp" />
+    <ClCompile Include="..\source\MP4.CO64.cpp" />
+    <ClCompile Include="..\source\MP4.ContainerAtom.cpp" />
+    <ClCompile Include="..\source\MP4.CPRT.cpp" />
+    <ClCompile Include="..\source\MP4.CTTS.cpp" />
+    <ClCompile Include="..\source\MP4.DataAtom.cpp" />
+    <ClCompile Include="..\source\MP4.DREF.cpp" />
+    <ClCompile Include="..\source\MP4.ELST.cpp" />
+    <ClCompile Include="..\source\MP4.File.cpp" />
+    <ClCompile Include="..\source\MP4.FREE.cpp" />
+    <ClCompile Include="..\source\MP4.FRMA.cpp" />
+    <ClCompile Include="..\source\MP4.FTYP.cpp" />
+    <ClCompile Include="..\source\MP4.FullBox.cpp" />
+    <ClCompile Include="..\source\MP4.HDLR.cpp" />
+    <ClCompile Include="..\source\MP4.HMHD.cpp" />
+    <ClCompile Include="..\source\MP4.IINF.cpp" />
+    <ClCompile Include="..\source\MP4.ILOC.cpp" />
+    <ClCompile Include="..\source\MP4.IMIF.cpp" />
+    <ClCompile Include="..\source\MP4.IPMC.cpp" />
+    <ClCompile Include="..\source\MP4.MDAT.cpp" />
+    <ClCompile Include="..\source\MP4.MDHD.cpp" />
+    <ClCompile Include="..\source\MP4.MEHD.cpp" />
+    <ClCompile Include="..\source\MP4.MFHD.cpp" />
+    <ClCompile Include="..\source\MP4.MFRO.cpp" />
+    <ClCompile Include="..\source\MP4.MVHD.cpp" />
+    <ClCompile Include="..\source\MP4.PADB.cpp" />
+    <ClCompile Include="..\source\MP4.Parser.cpp" />
+    <ClCompile Include="..\source\MP4.PDIN.cpp" />
+    <ClCompile Include="..\source\MP4.PITM.cpp" />
+    <ClCompile Include="..\source\MP4.SBGP.cpp" />
+    <ClCompile Include="..\source\MP4.SCHI.cpp" />
+    <ClCompile Include="..\source\MP4.SCHM.cpp" />
+    <ClCompile Include="..\source\MP4.SDTP.cpp" />
+    <ClCompile Include="..\source\MP4.SGPD.cpp" />
+    <ClCompile Include="..\source\MP4.SMHD.cpp" />
+    <ClCompile Include="..\source\MP4.STCO.cpp" />
+    <ClCompile Include="..\source\MP4.STDP.cpp" />
+    <ClCompile Include="..\source\MP4.STSC.cpp" />
+    <ClCompile Include="..\source\MP4.STSD.cpp" />
+    <ClCompile Include="..\source\MP4.STSH.cpp" />
+    <ClCompile Include="..\source\MP4.STSS.cpp" />
+    <ClCompile Include="..\source\MP4.STSZ.cpp" />
+    <ClCompile Include="..\source\MP4.STTS.cpp" />
+    <ClCompile Include="..\source\MP4.STZ2.cpp" />
+    <ClCompile Include="..\source\MP4.SUBS.cpp" />
+    <ClCompile Include="..\source\MP4.TFHD.cpp" />
+    <ClCompile Include="..\source\MP4.TFRA.cpp" />
+    <ClCompile Include="..\source\MP4.TKHD.cpp" />
+    <ClCompile Include="..\source\MP4.TREF.cpp" />
+    <ClCompile Include="..\source\MP4.TREX.cpp" />
+    <ClCompile Include="..\source\MP4.TRUN.cpp" />
+    <ClCompile Include="..\source\MP4.UDTA.cpp" />
+    <ClCompile Include="..\source\MP4.UnknownAtom.cpp" />
+    <ClCompile Include="..\source\MP4.VMHD.cpp" />
+    <ClCompile Include="..\source\MP4.XML.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\include\atoms.h" />
+    <ClInclude Include="..\source\include\MP4.Atom.h" />
+    <ClInclude Include="..\source\include\MP4.BinaryStream.h" />
+    <ClInclude Include="..\source\include\MP4.BXML.h" />
+    <ClInclude Include="..\source\include\MP4.CO64.h" />
+    <ClInclude Include="..\source\include\MP4.ContainerAtom.h" />
+    <ClInclude Include="..\source\include\MP4.CPRT.h" />
+    <ClInclude Include="..\source\include\MP4.CTTS.h" />
+    <ClInclude Include="..\source\include\MP4.DataAtom.h" />
+    <ClInclude Include="..\source\include\MP4.DREF.h" />
+    <ClInclude Include="..\source\include\MP4.ELST.h" />
+    <ClInclude Include="..\source\include\MP4.File.h" />
+    <ClInclude Include="..\source\include\MP4.FREE.h" />
+    <ClInclude Include="..\source\include\MP4.FRMA.h" />
+    <ClInclude Include="..\source\include\MP4.FTYP.h" />
+    <ClInclude Include="..\source\include\MP4.FullBox.h" />
+    <ClInclude Include="..\source\include\mp4.h" />
+    <ClInclude Include="..\source\include\MP4.HDLR.h" />
+    <ClInclude Include="..\source\include\MP4.HMHD.h" />
+    <ClInclude Include="..\source\include\MP4.IINF.h" />
+    <ClInclude Include="..\source\include\MP4.ILOC.h" />
+    <ClInclude Include="..\source\include\MP4.IMIF.h" />
+    <ClInclude Include="..\source\include\MP4.IPMC.h" />
+    <ClInclude Include="..\source\include\MP4.MDAT.h" />
+    <ClInclude Include="..\source\include\MP4.MDHD.h" />
+    <ClInclude Include="..\source\include\MP4.MEHD.h" />
+    <ClInclude Include="..\source\include\MP4.MFHD.h" />
+    <ClInclude Include="..\source\include\MP4.MFRO.h" />
+    <ClInclude Include="..\source\include\MP4.MVHD.h" />
+    <ClInclude Include="..\source\include\MP4.PADB.h" />
+    <ClInclude Include="..\source\include\MP4.Parser.h" />
+    <ClInclude Include="..\source\include\MP4.PDIN.h" />
+    <ClInclude Include="..\source\include\MP4.PITM.h" />
+    <ClInclude Include="..\source\include\MP4.SBGP.h" />
+    <ClInclude Include="..\source\include\MP4.SCHI.h" />
+    <ClInclude Include="..\source\include\MP4.SCHM.h" />
+    <ClInclude Include="..\source\include\MP4.SDTP.h" />
+    <ClInclude Include="..\source\include\MP4.SGPD.h" />
+    <ClInclude Include="..\source\include\MP4.SMHD.h" />
+    <ClInclude Include="..\source\include\MP4.STCO.h" />
+    <ClInclude Include="..\source\include\MP4.STDP.h" />
+    <ClInclude Include="..\source\include\MP4.STSC.h" />
+    <ClInclude Include="..\source\include\MP4.STSD.h" />
+    <ClInclude Include="..\source\include\MP4.STSH.h" />
+    <ClInclude Include="..\source\include\MP4.STSS.h" />
+    <ClInclude Include="..\source\include\MP4.STSZ.h" />
+    <ClInclude Include="..\source\include\MP4.STTS.h" />
+    <ClInclude Include="..\source\include\MP4.STZ2.h" />
+    <ClInclude Include="..\source\include\MP4.SUBS.h" />
+    <ClInclude Include="..\source\include\MP4.TFHD.h" />
+    <ClInclude Include="..\source\include\MP4.TFRA.h" />
+    <ClInclude Include="..\source\include\MP4.TKHD.h" />
+    <ClInclude Include="..\source\include\MP4.TREF.h" />
+    <ClInclude Include="..\source\include\MP4.TREX.h" />
+    <ClInclude Include="..\source\include\MP4.TRUN.h" />
+    <ClInclude Include="..\source\include\MP4.UDTA.h" />
+    <ClInclude Include="..\source\include\MP4.UnknownAtom.h" />
+    <ClInclude Include="..\source\include\MP4.VMHD.h" />
+    <ClInclude Include="..\source\include\MP4.XML.h" />
+    <ClInclude Include="..\source\include\stdc.h" />
+    <ClInclude Include="..\source\include\stl.h" />
+    <ClInclude Include="..\source\include\types.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
