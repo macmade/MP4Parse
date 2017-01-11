@@ -3,9 +3,12 @@ MP4Parse
 
 [![Build Status](https://img.shields.io/travis/macmade/MP4Parse.svg?branch=master&style=flat)](https://travis-ci.org/macmade/MP4Parse)
 [![Issues](http://img.shields.io/github/issues/macmade/MP4Parse.svg?style=flat)](https://github.com/macmade/MP4Parse/issues)
-![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)
+![Status](https://img.shields.io/badge/status-prototype-orange.svg?style=flat)
 ![License](https://img.shields.io/badge/license-boost-brightgreen.svg?style=flat)
-[![Contact](https://img.shields.io/badge/contact-@macmade-blue.svg?style=flat)](https://twitter.com/macmade)
+[![Contact](https://img.shields.io/badge/contact-@macmade-blue.svg?style=flat)](https://twitter.com/macmade)  
+[![Donate-Patreon](https://img.shields.io/badge/donate-patreon-yellow.svg?style=flat)](https://patreon.com/macmade)
+[![Donate-Gratipay](https://img.shields.io/badge/donate-gratipay-yellow.svg?style=flat)](https://www.gratipay.com/macmade)
+[![Donate-Paypal](https://img.shields.io/badge/donate-paypal-yellow.svg?style=flat)](https://paypal.me/xslabs)
 
 About
 -----
